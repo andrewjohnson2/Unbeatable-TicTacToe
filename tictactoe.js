@@ -59,39 +59,39 @@ $(function () {
         runStart();
     });
 
-    $('#1').click(function () {
+    $('#box0').click(function () {
         runMove(0);
     });
 
-    $('#2').click(function () {
+    $('#box1').click(function () {
         runMove(1);
     });
 
-    $('#3').click(function () {
+    $('#box2').click(function () {
         runMove(2);
     });
 
-    $('#4').click(function () {
+    $('#box3').click(function () {
         runMove(3);
     });
 
-    $('#5').click(function () {
+    $('#box4').click(function () {
         runMove(4);
     });
 
-    $('#6').click(function () {
+    $('#box5').click(function () {
         runMove(5);
     });
 
-    $('#7').click(function () {
+    $('#box6').click(function () {
         runMove(6);
     });
 
-    $('#8').click(function () {
+    $('#box7').click(function () {
         runMove(7);
     });
 
-    $('#9').click(function () {
+    $('#box8').click(function () {
         runMove(8);
     });
 
@@ -106,15 +106,19 @@ $(function () {
         isGameOver = false;
         updateNumBoard();
         updateUI();
-        $(".computerWins").hide();
-        $(".humanWins").hide();
-        $(".tieGame").hide();
+        hideOutcomes();
         if ($(".cpuFirst").is(':checked')) {
             makeMove(0);
             updateNumBoard();
             updateUI();
         }
         start = true;
+    }
+
+    function hideOutcomes() {
+        $(".computerWins").hide();
+        $(".humanWins").hide();
+        $(".tieGame").hide();
     }
 
     function runMove(move) {
@@ -566,11 +570,11 @@ $(function () {
 
     function updateUI() {
         var x;
-        for (x = 1; x <= NUM_BOXES; x++) {
-            if (board[x - 1] != 0)
-                $("#" + x + "").val(board[x - 1]);
-            if (board[x - 1] == 0) {
-                $("#" + x + "").val("");
+        for (x = 0; x < NUM_BOXES; x++) {
+            if (board[x] != 0)
+                $("#box" + x + "").val(board[x]);
+            if (board[x] == 0) {
+                $("#box" + x + "").val("");
             }
         }
     }
