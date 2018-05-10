@@ -313,7 +313,7 @@ $(function () {
             console.log("corner last");
             return;
         }
-        if (playCorner2()) {
+        if (medium && playCorner2()) {
             console.log("corner");
             return;
         }
