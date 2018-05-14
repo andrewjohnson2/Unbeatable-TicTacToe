@@ -42,6 +42,7 @@
 
 input:button {
     text-align: center;
+    border: outset;
 
 }
 
