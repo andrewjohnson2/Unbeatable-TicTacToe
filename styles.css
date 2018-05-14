@@ -9,6 +9,7 @@
     position: absolute;
     transform: translate(-50%, 0%);
     text-align: center;
+    background-color: none;
 }
 
 .row1,
