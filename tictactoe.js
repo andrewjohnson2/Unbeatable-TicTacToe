@@ -1,4 +1,4 @@
-var NUM_BOXES = 9;
+const NUM_BOXES = 9;
 
 $(function () {
 

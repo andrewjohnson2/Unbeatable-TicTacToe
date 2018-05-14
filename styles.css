@@ -17,7 +17,7 @@
 .row3 {
     height: 100px;
     width: 300px;
-    background-color: none;
+    background-color: blue;
 }
 
 
@@ -32,7 +32,7 @@
     border: none;
     position: fixed;
     left: 0%;
-    background-color: none;
+    background-color: blue;
 }
 
 .second {
