@@ -40,7 +40,7 @@ body {
     border-radius: 0;
     position: fixed;
     left: 0%;
-    background-color: dimgray;
+    background-color: lightgrey;
     color: white;
     -webkit-appearance: none;
 }
@@ -59,7 +59,7 @@ input:submit {
 }
 
 .reset {
-    background-color: dimgray;
+    background-color: lightgrey;
     border: solid;
     border-width: 2px;
     border-radius: 6px;
@@ -71,7 +71,7 @@ input:submit {
 
 .reset:hover {
     background-color: white;
-    color: dimgray;
+    color: lightgrey;
 }
 
 .bottom {
