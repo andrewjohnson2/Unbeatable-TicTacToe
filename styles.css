@@ -42,10 +42,12 @@ body {
     left: 0%;
     background-color: dimgray;
     color: white;
+    -webkit-appearance: none;
 }
 
 input:submit {
     shape-outside: border-box;
+    -webkit-appearance: none;
 }
 
 .second {
