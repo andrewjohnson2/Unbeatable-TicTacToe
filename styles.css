@@ -44,6 +44,10 @@ body {
     color: white;
 }
 
+input:submit {
+    shape-outside: border-box;
+}
+
 .second {
     left: 100px;
 }
