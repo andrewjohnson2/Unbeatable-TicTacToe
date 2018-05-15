@@ -48,7 +48,7 @@ $(function () {
     $(".cpuFirst").click(function () {
         resetGame();
         runStart();
-    })
+    });
 
 
     var hard = true;
@@ -157,7 +157,7 @@ $(function () {
         }
         if (tie()) {
             isGameOver = true;
-            return;
+
         }
 
     }
@@ -324,11 +324,11 @@ $(function () {
             return;
         }
         if (playSides()) {
-            return;
+
         } else {
             console.log("last");
             chooseNext();
-            return;
+
         }
     }
 
