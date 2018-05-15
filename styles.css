@@ -1,6 +1,8 @@
 .title {
     font-size: 25px;
     text-align: center;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
 
 }
 
@@ -10,6 +12,13 @@
     transform: translate(-50%, 0%);
     text-align: center;
     background-color: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+
+}
+
+body {
+    background-color: dimgray;
 }
 
 .row1,
@@ -28,11 +37,11 @@
     padding: 0;
     font-size: 50px;
     border-width: 0px;
-    border-color: black;
     border: none;
     position: fixed;
     left: 0%;
-    background-color: blue;
+    background-color: dimgray;
+    color: white;
 }
 
 .second {
@@ -43,12 +52,19 @@
     left: 200px;
 }
 
-input:button {
-    text-align: center;
-    border: outset;
-    background-color: none;
-    -webkit-appearance: none;
+.reset {
+    background-color: dimgray;
+    border: solid;
+    border-width: 2px;
+    border-radius: 6px;
+    border-color: white;
+    color: white;
 
+}
+
+.reset:hover {
+    background-color: white;
+    color: dimgray;
 }
 
 .bottom {

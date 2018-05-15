@@ -9,15 +9,19 @@ $(function () {
 
     var start = false;
 
+    $(".reset").click(function () {
+        resetGame();
+        runStart();
+    });
+
     $(".easy").click(function () {
         $(".medium").prop('checked', false);
         $(".hard").prop('checked', false);
         $(".easy").prop('checked', true);
         hard = false;
         medium = false;
-        if (start) {
-            runStart();
-        }
+        resetGame();
+        runStart();
     });
 
     $(".medium").click(function () {
@@ -26,9 +30,8 @@ $(function () {
         $(".easy").prop('checked', false);
         hard = false;
         medium = true;
-        if (start) {
-            runStart();
-        }
+        resetGame();
+        runStart();
     });
 
     $(".hard").click(function () {
@@ -38,10 +41,14 @@ $(function () {
         $(".easy").prop('checked', false);
         hard = true;
         medium = true;
-        if (start) {
-            runStart();
-        }
+        resetGame();
+        runStart();
     });
+
+    $(".cpuFirst").click(function () {
+        resetGame();
+        runStart();
+    })
 
 
     var hard = true;
@@ -55,11 +62,8 @@ $(function () {
     $('.humanWins').hide();
     $('.tieGame').hide();
 
-    $(".start").click(function () {
-        runStart();
-    });
-
     $('#box0').click(function () {
+
         runMove(0);
     });
 
@@ -96,9 +100,7 @@ $(function () {
     });
 
 
-
-
-    function runStart() {
+    function resetGame() {
         var x;
         for (x = 0; x < NUM_BOXES; x++) {
             board[x] = 0;
@@ -107,6 +109,10 @@ $(function () {
         updateNumBoard();
         updateUI();
         hideOutcomes();
+    }
+
+
+    function runStart() {
         if ($(".cpuFirst").is(':checked')) {
             makeMove(0);
             updateNumBoard();
@@ -122,7 +128,7 @@ $(function () {
     }
 
     function runMove(move) {
-        if (isGameOver == true || start == false) {
+        if (isGameOver == true) {
             return;
         }
         if (board[move] != "") {

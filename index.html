@@ -4,6 +4,8 @@
 <head>
     <title>Unbeatable Tic-Tac-Toe</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="styles.css">
@@ -16,13 +18,16 @@
 
     <div class="mainCont">
         <a>You are X's and the computer is O's.</a>
-        <br> Record: <a class="wins">0</a>-<a class="ties">0</a>-<a class="losses">0</a>
+        <!--<br> Record: <a class="wins">0</a>-<a class="ties">0</a>-<a class="losses">0</a>-->
         <br>
-        <input type="checkbox" class="cpuFirst" checked> CPU Goes First?
+        <input type="button" class="reset" value="Reset Game">
         <br>
-        <button class="start">Start New Game</button>
+        <input type="checkbox" class="cpuFirst"> CPU Goes First?
+
 
         <br> Difficulty: Easy: <input type="radio" class="easy"> Medium: <input type="radio" class="medium"> Hard: <input type="radio" class="hard" checked>
+
+
         <div class="row1">
             <input type="button" class="first box bottom" value="" id="box0"> <input type="button" value="" class="second box bottom left" id="box1"><input type="button" value="" class="third box bottom left" id="box2">
         </div>
@@ -35,6 +40,7 @@
         <a class="computerWins">Computer Wins</a>
         <a class="humanWins">Human Wins</a>
         <a class="tieGame">Tie Game</a>
+
     </div>
 
 
