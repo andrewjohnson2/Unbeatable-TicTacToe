@@ -310,6 +310,7 @@ $(function () {
             return;
         }
         if (hard && blockUserFork()) {
+            console.log("here");
             return;
         }
         if (hard && playCenter()) {
@@ -412,27 +413,57 @@ $(function () {
     }
 
     function blockUserFork() {
-        return fork(1);
+        return fork(1, true);
+
     }
 
     function attemptToFork() {
-        return fork(4);
+        return fork(4, false);
     }
 
-    function fork(square) {
+    function fork(square, checkMultiple) {
         var x;
+        var count = 0;
+        var potential = -1;
         for (x = 0; x < NUM_BOXES; x++) {
             if (numBoard[x] == 0) {
                 numBoard[x] = square;
                 if (!createsFork(square * 2, x)) {
                     numBoard[x] = 0;
                 } else {
-                    board[x] = "O";
-                    return true;
+                    if (checkMultiple) {
+                        count += 1;
+                        potential = x;
+                        numBoard[x] = 0;
+                    } else {
+                        board[x] = "O";
+                        return true;
+                    }
                 }
             }
         }
+        if (checkMultiple && count == 1) {
+            board[potential] = "O";
+            return true;
+        }
+        if (checkMultiple && count != 0) {
+            if (createTwo()) {
+                return true;
+            }
+        }
         return false;
+    }
+
+    // need to write function that finds a two in a row that
+    // forces the other player to block that doesn't create a fork for them
+    function createTwo() {
+        var x;
+        for (x = 0; x < NUM_BOXES; ++X) {
+            if (numBoard[x] == 0) {
+                numBoard[x] = 0;
+                if ()
+            }
+        }
     }
 
     function createsFork(value, x) {
